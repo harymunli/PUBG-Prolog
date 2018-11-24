@@ -1,7 +1,7 @@
 /* MAP -- INCLUDE */
-:- include(object).
+%:- include(object).
 :- include(player).
-:- include(enemy).
+%:- include(enemy).
 
 /* PLAYER -- STATE PREDICATE*/
 :- discontiguous(map_height/1).
@@ -23,10 +23,19 @@ map_show(Map) :-
 	matrix_print(Map).
 
 /* MAP -- CREATE */
-map_init_plain :- 
-	map_height(H), map_width(W),
-	matrix_generate('-', H, W, Map), 
-	asserta( map_current(Map) ).
+map_current_row(Row, 0, []) :- !.
+map_current_row(Row, Col, [H | T]) :-
+	map_width(W),
+	Rev is W - Col + 1,
+	( player(pos(Row,Rev)) -> H = 'P', fail ;
+	  	H = '-'),
+	NewCol is Col-1,
+	map_current_row(Row,NewCol,T).
 
-map_init :-
-	map_init_plain.	
+map_current(0, Col, []) :- !.
+map_current(Row, Col, [H | T]) :-
+	map_height(HH),
+	RevC is HH - Row + 1,
+	map_current_row(RevC, Col, H),
+	NewRow is Row-1,
+	map_current(NewRow, Col, T).
