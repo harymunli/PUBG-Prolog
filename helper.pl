@@ -1,7 +1,9 @@
 /* HELPER -- INCLUDE */
-:- include(map).
 :- discontiguous(randomize/2).
 :- discontiguous(del/3).
+
+map_height(10).
+map_width(10).
 
 /* ARITHMATIC */
 randomize(X, Y) :-

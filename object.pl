@@ -1,6 +1,4 @@
 /* OBJECT -- INCLUDE */
-:- include(helper).
-:- include(player).
 
 /* STAT */
 weapon(smg, 15, 30).			% Weapon
