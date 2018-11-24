@@ -24,3 +24,4 @@ object_init :-
 	randomize(X, Y), pos(X, Y, armor_lv2),
 	randomize(X, Y), pos(X, Y, ammo_smg),
 	randomize(X, Y), pos(X, Y, ammo_riffle).
+

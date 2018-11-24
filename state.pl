@@ -7,4 +7,5 @@ state_fail :-
 	write('You are dead!').
 
 state_goal :-
-	
+	enemy_count(0), 
+	write('You win!').
