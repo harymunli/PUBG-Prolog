@@ -7,7 +7,10 @@
 /* PLAYER -- STATE PREDICATE*/
 :- discontiguous(player/2).
 :- discontiguous(player/3).
-:- discontiguous(player_init/3).
+:- discontiguous(player_init/0).
+:- discontiguous(status/0).
+:- discontiguous(player_move/2).
+:- discontiguous(player_modify/2).
 :- dynamic(player/2).
 :- dynamic(player/3).
 

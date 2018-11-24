@@ -1,4 +1,9 @@
 /* PLAYER -- MOVEMENT */
+:- discontiguous(n/0).
+:- discontiguous(e/0).
+:- discontiguous(s/0).
+:- discontiguous(w/0).
+
 n :-
 	player(pos, _, Y), 
 	Y > 1,
