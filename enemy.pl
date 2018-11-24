@@ -1,7 +1,7 @@
 /* ENEMY -- DYNAMIC PREDICATE */
 
 /* ENEMY -- ATTRIBUTE */
-% enemy(ID, AtrribName, Type).
-enemy(All, health, 100).
-enemy(1, weapon, smg).
-enemy(2, )
+enemy_init :-
+	randomize(X,Y), enemy(1, pos(X,Y), weapon(smg, 30)),
+	randomize(X,Y), enemy(2, pos(X,Y), weapon(riffle, 25)),
+	randomize(X,Y), enemy(3, pos(X,Y), weapon(smg, 30)).
