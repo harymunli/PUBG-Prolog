@@ -24,5 +24,10 @@ object_init :-
 	randomize(X, Y), asserta( pos(X, Y, ammo_riffle) 	).
 
 /* OBJECT -- USE */
+use(Object) :-
+	player(inventory, OldInv, _),
+	member(Object, OldInv),
+	write('You use '), write(Object), nl,
+	del(Object, OldInv, NewInv).
 /* OBJECT -- TAKE */
 /* OBJECT -- DROP */

@@ -36,9 +36,3 @@ matrix_print([]).
 matrix_print([H | T]) :- 
 	list_print(H), nl, 
 	matrix_print(T).	
-
-/* TESTING */
-tes :-
-	map_height(H), map_width(W), 
-	matrix_generate('-',H,W,Result),
-	matrix_print(Result).

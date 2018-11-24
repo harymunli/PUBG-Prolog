@@ -1,8 +1,8 @@
 /* START -- INCLUDE */
-:- include(player).
-:- include(enemy).
-:- include(object).
-:- include(map).
+%:- include(player).
+%:- include(enemy).
+%:- include(object).
+%:- include(map).
 
 start :-
 	write('Title'),nl,
