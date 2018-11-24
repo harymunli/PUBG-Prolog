@@ -1,6 +1,7 @@
 /* PLAYER -- INCLUDE */
 :- include(map).
 :- include(helper).
+:- include(move).
 %:- include(object).
 
 /* PLAYER -- STATE PREDICATE*/
@@ -21,7 +22,7 @@ player_init :- % Initialize player's attribute & position!
 	asserta( player(armor,0) ),		  % P's armor == 0
 	asserta( player(move_count,0) ),  % P has been moved 0 times
 	asserta( player(inventory,[],3) ),% P's limit inventory is 3
-	asserta( player(equip,hand, 0) ).% P's equipped weapon is hand
+	asserta( player(equip,hand, 0) ). % P's equipped weapon is hand
 
 /* PLAYER -- MODIFY ATTRIBUTE */
 player_modify(Attrib, Change):-
