@@ -23,3 +23,6 @@ object_init :-
 	randomize(X, Y), asserta( pos(X, Y, ammo_smg) 		),
 	randomize(X, Y), asserta( pos(X, Y, ammo_riffle) 	).
 
+/* OBJECT -- USE */
+/* OBJECT -- TAKE */
+/* OBJECT -- DROP */
