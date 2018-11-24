@@ -16,12 +16,12 @@ ammo(ammo_riffle, 25).			% type -- ammo point
 object_init :-
 	% TODO	: What if I wanna 2 smg instead of 1? 
 	%		  Randomize amount!
-	randomize(X, Y), pos(X, Y, smg, 30),
-	randomize(X, Y), pos(X, Y, riffle, 25),
-	randomize(X, Y), pos(X, Y, medicine_lv1),
-	randomize(X, Y), pos(X, Y, medicine_lv2),
-	randomize(X, Y), pos(X, Y, armor_lv1),
-	randomize(X, Y), pos(X, Y, armor_lv2),
-	randomize(X, Y), pos(X, Y, ammo_smg),
-	randomize(X, Y), pos(X, Y, ammo_riffle).
+	randomize(X, Y), asserta( pos(X, Y, smg, 30) 		),
+	randomize(X, Y), asserta( pos(X, Y, riffle, 25)		),
+	randomize(X, Y), asserta( pos(X, Y, medicine_lv1)	),
+	randomize(X, Y), asserta( pos(X, Y, medicine_lv2)	),
+	randomize(X, Y), asserta( pos(X, Y, armor_lv1) 		),
+	randomize(X, Y), asserta( pos(X, Y, armor_lv2) 		),
+	randomize(X, Y), asserta( pos(X, Y, ammo_smg) 		),
+	randomize(X, Y), asserta( pos(X, Y, ammo_riffle) 	).
 
